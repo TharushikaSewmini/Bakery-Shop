@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="956.0" prefWidth="1634.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VehicleFormController">
+   <children>
+      <JFXTextField fx:id="txtVehicleId" layoutX="125.0" layoutY="228.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="31.0" prefWidth="218.0" promptText="A-2205">
+         <font>
+            <Font size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="28.0" layoutY="22.0" text="Vehicle" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="8.0" layoutY="81.0" prefHeight="3.0" prefWidth="1616.0" />
+      <Label layoutX="125.0" layoutY="188.0" text="Vehicle Id" textFill="#104570">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtVehicleType" layoutX="581.0" layoutY="228.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="31.0" prefWidth="267.0" promptText="Cab">
+         <font>
+            <Font size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="581.0" layoutY="188.0" text="Vehicle Type" textFill="#104570">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblVehicle" layoutX="71.0" layoutY="478.0" prefHeight="416.0" prefWidth="1491.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="351.9999694824219" text="Id" />
+            <TableColumn fx:id="colType" prefWidth="849.0" text="Type" />
+            <TableColumn fx:id="colOption" prefWidth="289.0" text="Option" />
+         </columns>
+      </TableView>
+      <Separator layoutX="60.0" layoutY="457.0" prefHeight="3.0" prefWidth="1533.0" />
+      <TextField fx:id="txtSearchVehicleId" layoutX="86.0" layoutY="96.0" onAction="#txtSearchOnAction" prefHeight="43.0" prefWidth="408.0" promptText="Search" style="-fx-background-color: white; -fx-border-color: #7f8c8d; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="40.0" fitWidth="36.0" layoutX="39.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-search-96.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSaveVehicle" layoutX="1119.0" layoutY="330.0" onAction="#saveVehicleOnAction" prefHeight="53.0" prefWidth="179.0" style="-fx-background-color: #2ecc71; -fx-background-radius: 8;" text="Save Vehicle" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdateVehicle" layoutX="1358.0" layoutY="330.0" onAction="#updateVehicleOnAction" prefHeight="53.0" prefWidth="179.0" style="-fx-background-color: #16a085; -fx-background-radius: 8;" text="Update Vehicle" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1394.0" layoutY="91.0" onAction="#addVehicleOnAction" prefHeight="53.0" prefWidth="179.0" style="-fx-background-color: #9b59b6; -fx-background-radius: 8;" text="+Add Vehicle" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <Line endX="1430.5858154296875" endY="-0.41419219970703125" layoutX="152.0" layoutY="161.0" startX="-100.0" startY="-2.20709228515625" stroke="#78a7bf" strokeWidth="5.0" />
+      <Line endX="-497.5355529785156" endY="-268.3106384277344" layoutX="546.0" layoutY="427.0" startX="-497.24267578125" startY="0.749969482421875" stroke="#78a7bf" strokeWidth="5.0" />
+      <Line endX="1432.0" endY="1.70709228515625" layoutX="149.0" layoutY="426.0" startX="-96.70712280273438" startY="1.792877197265625" stroke="#78a7bf" strokeWidth="5.0" />
+      <Line endX="-494.7071228027344" endY="-265.70709228515625" layoutX="2078.0" layoutY="427.0" startX="-494.70709228515625" stroke="#78a7bf" strokeWidth="5.0" />
+   </children>
+</AnchorPane>

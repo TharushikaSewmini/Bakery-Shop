@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context1" prefHeight="700.0" prefWidth="1167.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="715.0" style="-fx-background-color: B8E0F2;">
+         <children>
+            <ImageView fitHeight="565.0" fitWidth="675.0" layoutX="20.0" layoutY="114.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/fb4aceedb729d921fdb157ed40960e09.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="171.0" layoutY="37.0" text="Festiva Bakers" textFill="#34495e">
+               <font>
+                  <Font name="Britannic Bold" size="58.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="715.0" prefHeight="700.0" prefWidth="451.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="74.0" layoutY="336.0" text="Password" textFill="#104570">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Separator layoutX="77.0" layoutY="516.0" prefHeight="3.0" prefWidth="297.0" />
+            <TextField fx:id="txtUserName" layoutX="69.0" layoutY="266.0" onKeyReleased="#textFields_Key_Released" prefHeight="42.0" prefWidth="320.0" style="-fx-border-color: #2980b9; -fx-border-radius: 10; -fx-background-radius: 10;" />
+            <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="77.0" layoutY="445.0" onAction="#loginOnAction" prefHeight="43.0" prefWidth="297.0" style="-fx-background-color: #2980b9; -fx-background-radius: 25;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="145.0" layoutY="525.0" onAction="#createNewAccountOnAction" text="Create New Account" textFill="#34495e">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <PasswordField fx:id="pwdPassword" layoutX="72.0" layoutY="366.0" onKeyReleased="#textFields_Key_Released" prefHeight="42.0" prefWidth="320.0" style="-fx-border-color: #2980b9; -fx-border-radius: 10; -fx-background-radius: 10;" />
+            <Line endX="-125.5" endY="513.1212768554688" layoutX="538.0" layoutY="98.0" startX="-125.5" startY="-10.5" stroke="#104570" />
+            <Line endX="-125.5" endY="515.5354614257812" layoutX="164.0" layoutY="97.0" startX="-125.5" startY="-10.5" stroke="#104570" />
+            <Line endX="-135.603515625" endY="-21.20709228515625" layoutX="174.0" layoutY="108.0" startX="238.2071533203125" startY="-22.207122802734375" stroke="#104570" />
+            <Line endX="-134.7928466796875" endY="479.4141845703125" layoutX="174.0" layoutY="133.0" startX="237.7928466796875" startY="479.828369140625" stroke="#104570" />
+            <Label layoutX="168.0" layoutY="138.0" text="Login" textFill="#104570">
+               <font>
+                  <Font name="Arial Bold" size="38.0" />
+               </font>
+            </Label>
+            <Separator layoutX="236.0" layoutY="175.0" prefHeight="3.0" prefWidth="144.0" />
+            <Separator layoutX="71.0" layoutY="175.0" prefHeight="3.0" prefWidth="144.0" />
+            <Label layoutX="70.0" layoutY="236.0" text="User Name" textFill="#104570">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

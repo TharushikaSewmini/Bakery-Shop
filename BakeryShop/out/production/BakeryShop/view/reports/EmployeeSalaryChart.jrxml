@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EmployeeSalaryChart" pageWidth="595" pageHeight="600" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bace8003-2147-4130-b0e3-910819a57c3f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BakeryShop Data Adapter"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="month" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT ((salaryPerDay*workingDays)+bonus) AS Salary, s.employeeId, e.name  FROM (Salary s
+INNER JOIN Employee e ON s.employeeId = e.id)
+WHERE month = $P{month}
+GROUP BY(employeeId);]]>
+	</queryString>
+	<field name="Salary" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="Salary"/>
+		<property name="com.jaspersoft.studio.field.label" value="Salary"/>
+	</field>
+	<field name="employeeId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="employeeId"/>
+		<property name="com.jaspersoft.studio.field.label" value="employeeId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="employee"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="117" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="37" width="555" height="40" uuid="6d903148-ce28-4732-93ff-0f436ab7e4a7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee Salary Difference]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="96" width="555" height="1" uuid="dabe266e-b5c8-4ef0-8ea7-718d07a8196c"/>
+			</line>
+			<textField>
+				<reportElement x="232" y="68" width="90" height="30" uuid="ab61fa8e-a161-4f2b-9c9a-c10198cc7493"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{month}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="5" width="555" height="50" uuid="e2a15a68-d376-4062-93f8-3f2c490b7e15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Festiva Bakers]]></text>
+			</staticText>
+		</band>
+	</title>
+	<summary>
+		<band height="438" splitType="Stretch">
+			<pieChart>
+				<chart evaluationTime="Report">
+					<reportElement x="0" y="6" width="555" height="413" uuid="56becf78-d80e-461f-94f9-9a641dccf7af"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset resetType="Report"/>
+					<keyExpression><![CDATA[$F{employeeId}]]></keyExpression>
+					<valueExpression><![CDATA[$F{Salary}]]></valueExpression>
+					<labelExpression><![CDATA[$F{name}]]></labelExpression>
+				</pieDataset>
+				<piePlot labelFormat="{0}{2}" legendLabelFormat="{0}-{2}">
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="956.0" prefWidth="1634.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <JFXTextField fx:id="txtCustomerId" layoutX="91.0" layoutY="235.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="31.0" prefWidth="218.0">
+         <font>
+            <Font size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="22.0" layoutY="21.0" text="Customer" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="8.0" layoutY="81.0" prefHeight="3.0" prefWidth="1616.0" />
+      <Label layoutX="91.0" layoutY="190.0" text="Customer Id" textFill="#104570">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerName" layoutX="439.0" layoutY="230.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="44.0" prefWidth="323.0" promptText="Nimal Perera" style="-fx-background-radius: 10; -fx-border-radius: 10;">
+         <font>
+            <Font size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="439.0" layoutY="190.0" text="Customer Name" textFill="#104570">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerAddress" layoutX="881.0" layoutY="230.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="44.0" prefWidth="253.0" promptText="Colombo" style="-fx-background-radius: 10; -fx-border-radius: 10;">
+         <font>
+            <Font size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="881.0" layoutY="190.0" text="Customer Address" textFill="#104570">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerContact" layoutX="1247.0" layoutY="230.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="44.0" prefWidth="230.0" promptText="0764983722" style="-fx-background-radius: 10; -fx-border-radius: 10;">
+         <font>
+            <Font size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="1248.0" layoutY="190.0" text="Customer Contact" textFill="#104570">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCustomer" layoutX="71.0" layoutY="485.0" prefHeight="409.0" prefWidth="1491.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="233.99996948242188" text="Id" />
+            <TableColumn fx:id="colName" prefWidth="468.0000305175781" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="292.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="262.0" text="Contact" />
+            <TableColumn fx:id="colOption" prefWidth="233.0" text="Option" />
+         </columns>
+      </TableView>
+      <Separator layoutX="47.0" layoutY="458.0" prefHeight="3.0" prefWidth="1533.0" />
+      <Line endX="1430.5858154296875" endY="-0.41419219970703125" layoutX="149.0" layoutY="165.0" startX="-100.0" startY="-2.20709228515625" stroke="#788fbf" strokeWidth="5.0" />
+      <Line endX="-497.5355529785156" endY="-268.3106384277344" layoutX="543.0" layoutY="431.0" startX="-497.24267578125" startY="0.749969482421875" stroke="#788fbf" strokeWidth="5.0" />
+      <Line endX="1432.0" endY="1.70709228515625" layoutX="146.0" layoutY="430.0" startX="-96.70712280273438" startY="1.792877197265625" stroke="#788fbf" strokeWidth="5.0" />
+      <Line endX="-494.7071228027344" endY="-265.70709228515625" layoutX="2075.0" layoutY="431.0" startX="-494.70709228515625" stroke="#788fbf" strokeWidth="5.0" />
+      <TextField fx:id="txtSearchId" layoutX="78.0" layoutY="97.0" onAction="#txtSearchOnAction" prefHeight="43.0" prefWidth="408.0" promptText="Search" style="-fx-background-color: white; -fx-border-color: #7f8c8d; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="40.0" fitWidth="36.0" layoutX="42.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-search-96.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSaveCustomer" layoutX="1116.0" layoutY="353.0" onAction="#saveCustomerOnAction" prefHeight="53.0" prefWidth="179.0" style="-fx-background-color: #2ecc71; -fx-background-radius: 8;" text="Save Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1392.0" layoutY="100.0" onAction="#addCustomerOnAction" prefHeight="53.0" prefWidth="179.0" style="-fx-background-color: #9b59b6; -fx-background-radius: 8;" text="+Add Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdateCustomer" layoutX="1347.0" layoutY="353.0" onAction="#updateCustomerOnAction" prefHeight="53.0" prefWidth="194.0" style="-fx-background-color: #16a085; -fx-background-radius: 8;" text="Update Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

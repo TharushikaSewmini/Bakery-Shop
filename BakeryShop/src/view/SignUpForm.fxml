@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context2" prefHeight="654.0" prefWidth="1167.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpFormController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="700.0" prefWidth="715.0" style="-fx-background-color: B8E0F2;">
+         <children>
+            <ImageView fitHeight="565.0" fitWidth="675.0" layoutX="20.0" layoutY="114.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/fb4aceedb729d921fdb157ed40960e09.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="171.0" layoutY="37.0" text="Festiva Bakers" textFill="#34495e">
+               <font>
+                  <Font name="Britannic Bold" size="58.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="715.0" prefHeight="700.0" prefWidth="451.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="70.0" layoutY="418.0" text="Password" textFill="#104570">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Separator layoutX="73.0" layoutY="577.0" prefHeight="3.0" prefWidth="297.0" />
+            <TextField fx:id="txtFullName" layoutX="65.0" layoutY="180.0" onKeyReleased="#textFields_Key_Released" prefHeight="42.0" prefWidth="320.0" style="-fx-border-color: #2980b9; -fx-border-radius: 10; -fx-background-radius: 10;" />
+            <JFXButton fx:id="btnCreateAccount" buttonType="RAISED" layoutX="73.0" layoutY="515.0" onAction="#createAccountOnAction" prefHeight="43.0" prefWidth="297.0" style="-fx-background-color: #2980b9; -fx-background-radius: 25;" text="Create Account" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="124.0" layoutY="586.0" onAction="#alreadyHaveAnAccountOnAction" text="Already Have An Account" textFill="#34495e">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <PasswordField fx:id="pwdPassword" layoutX="66.0" layoutY="448.0" onKeyReleased="#textFields_Key_Released" prefHeight="42.0" prefWidth="320.0" style="-fx-border-color: #2980b9; -fx-border-radius: 10; -fx-background-radius: 10;" />
+            <Line endX="-126.5" endY="533.7070922851562" layoutX="538.0" layoutY="112.0" startX="-125.5" startY="-57.70709228515625" stroke="#104570" />
+            <Line endX="-125.49993896484375" endY="546.7070922851562" layoutX="163.0" layoutY="99.0" startX="-125.5" startY="-44.70709228515625" stroke="#104570" />
+            <Line endX="-135.603515625" endY="-21.20709228515625" layoutX="173.0" layoutY="75.0" startX="239.0" startY="-21.20709228515625" stroke="#104570" />
+            <Line endX="-134.7928466796875" endY="479.4141845703125" layoutX="173.0" layoutY="166.0" startX="237.7928466796875" startY="479.828369140625" stroke="#104570" />
+            <Separator layoutX="234.0" layoutY="119.0" prefHeight="3.0" prefWidth="144.0" />
+            <Separator layoutX="69.0" layoutY="119.0" prefHeight="3.0" prefWidth="195.0" />
+            <Label layoutX="67.0" layoutY="331.0" text="User Name" textFill="#104570">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="141.0" layoutY="82.0" text="Sign Up" textFill="#104570">
+               <font>
+                  <Font name="Arial Bold" size="38.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUserName" layoutX="66.0" layoutY="362.0" onKeyReleased="#textFields_Key_Released" prefHeight="42.0" prefWidth="320.0" style="-fx-border-color: #2980b9; -fx-border-radius: 10; -fx-background-radius: 10;" />
+            <Label layoutX="68.0" layoutY="149.0" text="Full Name" textFill="#104570">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEmail" layoutX="66.0" layoutY="270.0" onKeyReleased="#textFields_Key_Released" prefHeight="42.0" prefWidth="320.0" style="-fx-border-color: #2980b9; -fx-border-radius: 10; -fx-background-radius: 10;" />
+            <Label layoutX="68.0" layoutY="240.0" text="Email" textFill="#104570">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

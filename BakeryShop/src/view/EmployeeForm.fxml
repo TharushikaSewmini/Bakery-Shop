@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="956.0" prefWidth="1634.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeFormController">
+   <children>
+      <JFXTextField fx:id="txtEmployeeId" layoutX="89.0" layoutY="234.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="39.0" prefWidth="201.0" promptText="E001" style="-fx-border-radius: 10;">
+         <font>
+            <Font size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="29.0" layoutY="21.0" text="Employee" textFill="#2c3e50">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="8.0" layoutY="81.0" prefHeight="3.0" prefWidth="1616.0" />
+      <Label layoutX="89.0" layoutY="194.0" text="Employee Id" textFill="#104570">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmployeeName" layoutX="422.0" layoutY="232.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="42.0" prefWidth="365.0" promptText="Nimal Perera" style="-fx-background-radius: 10; -fx-border-radius: 10;">
+         <font>
+            <Font size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="422.0" layoutY="195.0" text="Employee Name" textFill="#104570">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmployeeAddress" layoutX="893.0" layoutY="232.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="42.0" prefWidth="283.0" promptText="Colombo 7" style="-fx-border-radius: 10;">
+         <font>
+            <Font size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="893.0" layoutY="195.0" text="Employee Address" textFill="#104570">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmployeeContact" layoutX="1289.0" layoutY="233.0" onKeyReleased="#textFieldsKeyReleased" prefHeight="42.0" prefWidth="236.0" promptText="0714455033" style="-fx-border-radius: 10;">
+         <font>
+            <Font size="18.0" />
+         </font></JFXTextField>
+      <Label layoutX="1289.0" layoutY="193.0" text="Employee Contact" textFill="#104570">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblEmployee" layoutX="71.0" layoutY="511.0" prefHeight="392.0" prefWidth="1491.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="195.99996948242188" text="Id" />
+            <TableColumn fx:id="colName" prefWidth="403.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="340.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="314.0" text="Contact" />
+            <TableColumn fx:id="colOption" prefWidth="237.0" text="Option" />
+         </columns>
+      </TableView>
+      <Separator layoutX="44.0" layoutY="471.0" prefHeight="3.0" prefWidth="1533.0" />
+      <Line endX="1430.5858154296875" endY="-0.41419219970703125" layoutX="146.0" layoutY="168.0" startX="-100.0" startY="-2.20709228515625" stroke="#a0bf78" strokeWidth="5.0" />
+      <Line endX="-497.5355529785156" endY="-268.3106384277344" layoutX="540.0" layoutY="434.0" startX="-497.24267578125" startY="0.749969482421875" stroke="#a0bf78" strokeWidth="5.0" />
+      <Line endX="1432.0" endY="1.70709228515625" layoutX="143.0" layoutY="433.0" startX="-96.70712280273438" startY="1.792877197265625" stroke="#a0bf78" strokeWidth="5.0" />
+      <Line endX="-494.7071228027344" endY="-265.70709228515625" layoutX="2072.0" layoutY="434.0" startX="-494.70709228515625" stroke="#a0bf78" strokeWidth="5.0" />
+      <TextField fx:id="txtSearchEmployeeId" layoutX="89.0" layoutY="103.0" onAction="#txtSearchOnAction" prefHeight="43.0" prefWidth="408.0" promptText="Search" style="-fx-background-color: white; -fx-border-color: #7f8c8d; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="40.0" fitWidth="36.0" layoutX="42.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-search-96.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSaveEmployee" layoutX="1115.0" layoutY="343.0" onAction="#saveEmployeeOnAction" prefHeight="53.0" prefWidth="179.0" style="-fx-background-color: #2ecc71; -fx-background-radius: 8;" text="Save Employee" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdateEmployee" layoutX="1347.0" layoutY="343.0" onAction="#updateEmployeeOnAction" prefHeight="53.0" prefWidth="201.0" style="-fx-background-color: #16a085; -fx-background-radius: 8;" text="Update Employee" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1400.0" layoutY="98.0" onAction="#addEmployeeOnAction" prefHeight="53.0" prefWidth="179.0" style="-fx-background-color: #9b59b6; -fx-background-radius: 8;" text="+Add Employee" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="468.0" layoutY="355.0" prefHeight="42.0" prefWidth="438.0" />
+   </children>
+</AnchorPane>

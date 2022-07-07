@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainContext" prefHeight="1012.0" prefWidth="1865.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController1">
+   <children>
+      <AnchorPane prefHeight="1011.0" prefWidth="231.0" style="-fx-background-color: #34495e;">
+         <children>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="-2.0" layoutY="195.0" onAction="#homeOnAction" prefHeight="74.0" prefWidth="288.0" text="       Home" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="-2.0" layoutY="269.0" onAction="#productOnAction" prefHeight="74.0" prefWidth="288.0" text="       Product" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="-2.0" layoutY="343.0" onAction="#customerOnAction" prefHeight="74.0" prefWidth="288.0" text="       Customer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="-2.0" layoutY="417.0" onAction="#orderOnAction" prefHeight="74.0" prefWidth="288.0" text="       Order" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="-2.0" layoutY="491.0" onAction="#deliveryOrderOnAction" prefHeight="74.0" prefWidth="288.0" text="       Delivery Order" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="-2.0" layoutY="565.0" onAction="#employeeOnAction" prefHeight="74.0" prefWidth="288.0" text="       Employee" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="-2.0" layoutY="639.0" onAction="#vehicleOnAction" prefHeight="74.0" prefWidth="288.0" text="       Vehicle" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="-2.0" layoutY="713.0" onAction="#driverOnAction" prefHeight="74.0" prefWidth="288.0" text="       Driver" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="-2.0" layoutY="787.0" onAction="#salaryOnAction" prefHeight="74.0" prefWidth="288.0" text="       Salary" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" layoutX="-2.0" layoutY="861.0" onAction="#reportsOnAction" prefHeight="74.0" prefWidth="288.0" text="       Reports" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></JFXButton>
+            <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="101.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/kisspng-logo-yellow-font-bread-vector-5ad7b150d10278.6455052115240850728561.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="60.0" layoutY="122.0" text="Festiva Bakers" textFill="WHITE">
+               <font>
+                  <Font name="Rockwell Bold Italic" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="12.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/baseline_house_white_24dp1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="12.0" layoutY="291.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/baseline_lunch_dining_white_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="12.0" layoutY="365.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/baseline_person_white_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="12.0" layoutY="439.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/baseline_shopping_basket_white_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="12.0" layoutY="513.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/baseline_local_shipping_white_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="12.0" layoutY="587.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/baseline_people_white_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="12.0" layoutY="661.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/baseline_directions_car_white_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="15.0" layoutY="738.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-driver-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="12.0" layoutY="809.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-salary-male-30.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="13.0" layoutY="883.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/baseline_signal_cellular_alt_white_24dp.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="286.0" prefHeight="55.0" prefWidth="1634.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <JFXButton fx:id="btnLogout" layoutX="1518.0" layoutY="8.0" onAction="#logOutOnAction" prefHeight="38.0" prefWidth="92.0" style="-fx-background-color: #34495e;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font></JFXButton>
+            <Label fx:id="lblDate" layoutX="36.0" layoutY="16.0" text="2022-10-12" textFill="#2c3e50">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="217.0" layoutY="16.0" text="10: 20: 35" textFill="#2c3e50">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="dashBoardContext" layoutX="285.0" layoutY="55.0" prefHeight="956.0" prefWidth="1634.0" style="-fx-background-color: white;">
+         <children>
+            <Label alignment="TOP_CENTER" layoutX="505.0" layoutY="133.0" prefHeight="167.0" prefWidth="257.0" style="-fx-background-color: #9c88ff; -fx-background-radius: 10;" text="Products" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="106.0" layoutY="133.0" prefHeight="167.0" prefWidth="257.0" style="-fx-background-color: #3498db; -fx-background-radius: 10;" text="Customers" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="899.0" layoutY="133.0" prefHeight="167.0" prefWidth="257.0" style="-fx-background-color: #f9ca24; -fx-background-radius: 10;" text="Orders" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="1288.0" layoutY="133.0" prefHeight="167.0" prefWidth="257.0" style="-fx-background-color: #4cd137; -fx-background-radius: 10;" text="Deliver Orders" textFill="WHITE">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCustomerCount" alignment="CENTER" layoutX="206.0" layoutY="195.0" text="00" textFill="WHITE">
+               <font>
+                  <Font size="52.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblProductCount" alignment="CENTER" layoutX="605.0" layoutY="195.0" text="00" textFill="WHITE">
+               <font>
+                  <Font size="52.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblOrderCount" alignment="CENTER" layoutX="999.0" layoutY="195.0" text="00" textFill="WHITE">
+               <font>
+                  <Font size="52.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDeliveryOrderCount" alignment="CENTER" layoutX="1388.0" layoutY="195.0" text="00" textFill="WHITE">
+               <font>
+                  <Font size="52.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="20.0" text="Home" textFill="#2c3e50">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Line endX="1504.0" endY="16.0" layoutX="123.0" layoutY="55.0" startX="-116.0" startY="16.0" stroke="#2c3e50" />
+            <Label layoutX="664.0" layoutY="403.0" prefHeight="55.0" prefWidth="306.0" text="All Products Details" textFill="#555387">
+               <font>
+                  <Font name="Arial Black" size="28.0" />
+               </font>
+            </Label>
+            <Separator layoutX="75.0" layoutY="443.0" prefHeight="1.0" prefWidth="587.0" />
+            <Separator layoutX="965.0" layoutY="443.0" prefHeight="1.0" prefWidth="587.0" />
+            <TableView fx:id="tblProduct" layoutX="72.0" layoutY="494.0" prefHeight="409.0" prefWidth="1491.0">
+               <columns>
+                  <TableColumn fx:id="colProductCode" prefWidth="250.0" text="code" />
+                  <TableColumn fx:id="colProductDescription" prefWidth="556.0" text="Description" />
+                  <TableColumn fx:id="colProductQtyOnHand" prefWidth="347.0" text="Qty On Hand" />
+                  <TableColumn fx:id="colProductUnitPrice" prefWidth="337.0" text="Unit Price" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
